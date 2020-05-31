@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>
+        </title>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="/css/edit.css">
+    </head>
+    <body>
+        <h1 id="page-heading">
+            <i class="fas fa-address-book"></i>Phone Book</h1>
+           <div class="container">  
+           <form id="contact" action="/contact_list" method="POST">
+         <a href="/"><i style="color:black;font-size: 15px;" class="fas fa-arrow-left "><span >Edit Contact</span></i></a><br><br>
+    <fieldset>
+        <p>Name</p>
+      <input placeholder="Name" name="name" type="text" tabindex="1" required autofocus>
+    </fieldset>
+    <fieldset>
+        <p>DOB</p>
+        <input type="date" id="birthday" name="birthday" required  style="color:#888;">
+    </fieldset>
+    <fieldset>
+        <p>Mobile Number</p>
+      <input placeholder="Your Phone Number" type="tel" name="phone" tabindex="3" required  ><i id="plus"class="fas fa-plus-circle " onclick=fun()></i>
+    </fieldset>
+    <fieldset>
+        <p>Email</p>
+      <input placeholder="abc@example.com" type="email" name="email" tabindex="4" required  ><i id="plus"class="fas fa-plus-circle " onclick=fun()></i>
+    </fieldset>
+    <fieldset>
+        <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">UPDATE</button>
+      </fieldset>
+   
+  </form>
+ 
+  
+</div>
+              
+                 
+            
+        <!-- <form action="/contact_list" method="POST">
+            <input type="text" name="name" placeholder="Enter name" required>
+            <input type="number" name="phone" placeholder="Enter phone no." required>
+            <button type="submit">Add</button>
+        </form> -->
+        <!-- <div>
+           <a href="/form" style="margin-left: 435px; color:black;background-color: white;"> <i class="fas fa-plus-circle "></i></a>
+        </div>
+         -->
+           
+        
+        <script src="https://kit.fontawesome.com/72f4894613.js" crossorigin="anonymous"></script>
+        <script src="/js/home.js"></script>
+    </body>
+</html>

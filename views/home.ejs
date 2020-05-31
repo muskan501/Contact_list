@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>
+            <%=
+            title
+            %>
+        </title>
+        <link rel="stylesheet" href="/css/home.css">
+    </head>
+    <body>
+        <h1 style="text-align:center" id="page-heading">
+            <i class="fas fa-address-book"></i> Phone Book</h1><br>
+        <div style="margin-left: 340px;" id="container">
+            <form  >
+                        <fieldset>
+                          <input placeholder="Search" type="text" tabindex="1"  autofocus><button id="button"><i class="fas fa-search"></i></button>
+                        </fieldset>
+                      </form>
+                       
+            <ul style="list-style: none;">
+                <% for(var i of contact_list){ %>
+                   <li>
+
+                    <span id="name"><%=i.name%></span>
+                            <span id="phone"><i class="fas fa-caret-down"></i></span><hr>
+                            <div id="details" style="background-color: rgb(243, 169, 243);color:black">
+                                <span ><%=i.dob%></span>
+                                <span><a id="href" href="/edit">
+                                    <button id="edit">Edit</button></a></span>
+                                <span><a id="href" href="/delete-contact/?id=<%= i._id %>">
+                                <button id="remove">Remove</button>
+                                </a></span>
+                                <div>
+                                    <span><i style="color:black" class="fas fa-phone-square"></i></span><span><%=i.phone%></span>
+                                    <span id="email"><i style="color:black" class="fas fa-envelope"></i></span><span><%=i.email%></span>
+                                </div>
+                            </div>
+                    
+                    </li>
+                   
+                    <%}%>
+            </ul>
+           </form>
+        </div>
+        <!-- <form action="/contact_list" method="POST">
+            <input type="text" name="name" placeholder="Enter name" required>
+            <input type="number" name="phone" placeholder="Enter phone no." required>
+            <button type="submit">Add</button>
+        </form> -->
+        <div>
+            <a href="/form" style=" margin-left:920px; font-size:20px; color:black;background-color: rgb(179, 227, 233);"> <i class="fas fa-plus-circle "></i></a>
+         </div>
+
+        <script src="https://kit.fontawesome.com/72f4894613.js" crossorigin="anonymous"></script>
+        <script src="/js/home.js"></script>
+    </body>
+</html>
